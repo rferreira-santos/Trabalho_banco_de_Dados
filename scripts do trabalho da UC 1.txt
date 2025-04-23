@@ -1,0 +1,42 @@
+create TABLE inscricao(
+    nome_evento varchar (30) NOT NULL,
+    status varchar (10) NOT NULL,
+    data_hora varchar (18) NOT NULL, 
+    cpf_participante varchar (15) NOT NULL,	
+    PRIMARY KEY (nome_evento),
+    FOREIGN KEY (cpf_participante) REFERENCES participante(cpf_participante)
+    );
+
+
+create TABLE palestrante(
+    cpf_palestrante varchar (15) NOT NULL,
+    nome varchar (25) NOT NULL,
+    telefone integer (15) NOT NULL,
+    mini_curriculo varchar (100) NOT NULL,
+    PRIMARY key (cpf_palestrante)
+    );
+    
+
+create TABLE evento(
+    nome_evento varchar (15) NOT NULL,
+    data_hora varchar (18) NOT NULL,
+    nome_local varchar (30) NOT NULL,
+    cpf_palestrante varchar (15) NOT NULL,
+    PRIMARY key (nome_evento),
+    FOREIGN KEY (nome_local) REFERENCES locais(nome_local),
+    FOREIGN KEY	(cpf_palestrante) REFERENCES palestrante(cpf_palestrante)
+    );
+
+create TABLE certificado(
+    nome varchar (30) NOT NULL,
+    data_hora varchar (18) NOT NULL,
+    cpf_participante varchar (15) NOT NULL,
+    nome_local varchar (30) NOT NULL,
+    nome_evento varchar (30)NOT NULL,
+    cpf_palestrante varchar (15) NOT NULL, 
+    FOREIGN key(cpf_participante) REFERENCES participante(cpf_participante),
+    FOREIGN KEY(nome_local) REFERENCES locais(nome_local),
+    FOREIGN KEY(nome_evento) REFERENCES evento(nome_evento),
+    FOREIGN KEY(cpf_palestrante) REFERENCES palestrante(cpf_palestrante) 
+    );
+    

@@ -1,0 +1,34 @@
+insert INTO participante (cpf_participante, email, instituicao, nome, telefone) VALUES
+	('12344532597', 'rogerio@gmail.com, UVA', 'Rogerio dos Santos', '219785412569'),
+    ('06425964782', 'fernando@gmail.com',' UVA', 'Fernando Alberto', '21975159402'),
+    ('06258466900', 'mmaicon@gmail.com', 'UFRJ', 'Maicon de Araujo', '2199984528'),
+    ('06812547899', 'michele_maria@gmail.com',' UFRJ', 'Michele Maria da Silva', '62989862554'),
+    ('12865899720', 'fernandas@gmail.com', 'ESTACIO', 'Fernanda Santos dos Santos', '11966102556');
+
+insert INTO palestrante (cpf_palestrante,mini_curriculo,nome,telefone) VALUES
+	('88023461273', 'advogado e professor de direito da Universidade Presbiteriana Mackenzie. Em seus mais de 30 anos atuando no setor jurídico', 'Daniel Mário Moreira', '35983662320'),
+    ('57774473173', 'Profissional de marketing com +8 anos de experiência em estratégias de branding, marketing digital e crescimento de marcas','Severino Marcos Vinicius Levi Costa', '21986367116'),
+    ('50956446574', 'Especialista em tecnologia da informação com ampla experiência em cloud computing. De perfil dinâmico e analítico', 'Cauê Heitor Ryan Mendes', '21992080548'),
+    ('81951656130', 'Geógrafo e pesquisador com expertise em mudanças climáticas e gestão ambiental','Rafael Joaquim Heitor Cavalcanti', '2198798-6716'),
+    ('85217356421', 'Psicólogo responsável com mais de 4 anos de experiência em psicologia clínica e educacional', 'Otávio Daniel Moura', '87995240348');
+
+INSERT INTO locais(capacidade,nome_local,recursos) VALUES
+('100 pessoas','auditório Bahia','microfone, jogo de luzes e ar condicionado'),
+('150 pessoas','auditório Rio De Janeiro','microfone sem fio, ar condicionado e banco acolchoado'),
+('50 pessoas','auditório Acre','microfone com fio e ar condicionado'),
+('250 pessoas','auditório São Paulo','microfone sem fio, ar condicionado, banco acolchoado e camarim'),
+('300 pessoas','auditório Minas Gerais','2 microfone sem fio, ar condicionado, banco acolchoado e camarim e ar quente');
+
+insert INTO evento(nome_evento,data_hora,nome_local,cpf_palestrante) VALUES
+('Saúde Mental','20/05/2025 10:00','auditório Rio De Janeiro','85217356421'), 
+('Business Intelligence','20/05/2025 10:00','auditório São Paulo','50956446574'),
+('Direito do trabalho','20/05/2025 10:00','auditório Bahia','88023461273'),
+('Aquecimento global','20/05/2025 10:00','auditório Acre','81951656130'),
+('Mídias Sociais','20/05/2025 10:00','auditório Minas Gerais','57774473173');
+
+INSERT INTO inscricao(nome_evento,status,data_hora,cpf_participante) VALUES
+('Business Intelligence','Inscrito','20/05/2025 10:00','06425964782'),
+('Saúde Mental','Pendente','20/05/2025 10:00','12344532597'),
+('Direito do trabalho','Inscrito','20/05/2025 10:00','06258466900'),
+('Aquecimento global','Inscrito','20/05/2025 10:00','06812547899'),
+('Mídias Sociais','Pendente','20/05/2025 10:00','12865899720');

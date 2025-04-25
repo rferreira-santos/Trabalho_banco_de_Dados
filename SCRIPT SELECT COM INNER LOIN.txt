@@ -1,0 +1,4 @@
+select p.cpf_participante,t.status
+from participante p 
+INNER JOIN inscricao t 
+ON p.cpf_participante = t.cpf_participante
